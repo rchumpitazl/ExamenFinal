@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.7.99" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Examen.UnidadDeTrabajo\Examen.UnidadDeTrabajo.csproj" />
+    <ProjectReference Include="..\ExamenModelo\Examen.Modelos.csproj" />
+  </ItemGroup>
+
+</Project>

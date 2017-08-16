@@ -1,0 +1,53 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Examen Cibertec</title>
+
+    <environment names="Development, Production">
+        <link href="~/libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+
+</head>
+<body ng-controller="applicationController as vm" ng-init="init('@ViewBag.WebApiUrl')">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Examen Angular</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ng-if="!vm.validate()" ng-click="vm.iniciarSesion()" href="#" ui-sref-active="active">Inicio</a></li>
+                    <li><a ng-if="vm.validate()" ng-click="vm.logout()" href="#" ui-sref-active="active">Salir</a></li>
+                    <li><a ng-if="vm.validate()" ng-click="vm.corporacion()" href="#" ui-sref-active="active">Corporación</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - Examen Cibertec</p>
+        </footer>
+    </div>
+
+    <environment names="Development">
+        <script src="~/js/bootstrap.js"></script>
+        <script src="~/js/angular.js"></script>
+        <script src="~/js/app-site.js"></script>
+        <script src="~/js/app-cibertec.js"></script>
+    </environment>
+
+    <environment names="Production">
+        <script src="~/js/bootstrap.js"></script>
+        <script src="~/js/angular.js"></script>
+        <script src="~/js/app-site.js"></script>
+        <script src="~/js/app-cibertec.js"></script>
+    </environment>
+
+</body>
+</html>

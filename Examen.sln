@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.Modelos", "ExamenModelo\Examen.Modelos.csproj", "{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.Repositorios", "Examen.Repositorio\Examen.Repositorios.csproj", "{5FB62943-23A2-434E-BA05-65DBB0E25B5A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.UnidadDeTrabajo", "Examen.UnidadDeTrabajo\Examen.UnidadDeTrabajo.csproj", "{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datos", "Datos", "{5D405BDE-4FC8-43EF-BBD3-7872F5876962}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.WebApi", "Examen.WebApi\Examen.WebApi.csproj", "{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.Angular", "Examen.Angular\Examen.Angular.csproj", "{F65B0F11-5986-4214-A945-B11B5EE35A6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{487346A7-D764-4578-B123-188DFBA9DEF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB62943-23A2-434E-BA05-65DBB0E25B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB62943-23A2-434E-BA05-65DBB0E25B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB62943-23A2-434E-BA05-65DBB0E25B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB62943-23A2-434E-BA05-65DBB0E25B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8615BFF0-07C2-49C4-9E0B-E123C4F65C59} = {5D405BDE-4FC8-43EF-BBD3-7872F5876962}
+		{5FB62943-23A2-434E-BA05-65DBB0E25B5A} = {5D405BDE-4FC8-43EF-BBD3-7872F5876962}
+		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723} = {5D405BDE-4FC8-43EF-BBD3-7872F5876962}
+		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A} = {487346A7-D764-4578-B123-188DFBA9DEF5}
+		{F65B0F11-5986-4214-A945-B11B5EE35A6B} = {487346A7-D764-4578-B123-188DFBA9DEF5}
+	EndGlobalSection
+EndGlobal
