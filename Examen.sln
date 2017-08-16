@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.Modelos", "ExamenModelo\Examen.Modelos.csproj", "{8615BFF0-07C2-49C4-9E0B-E123C4F65C59}"
 EndProject
@@ -16,6 +16,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.Angular", "Examen.Angular\Examen.Angular.csproj", "{F65B0F11-5986-4214-A945-B11B5EE35A6B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{487346A7-D764-4578-B123-188DFBA9DEF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35DF4C59-A9C5-4CDA-B3F8-3550AA7A1660}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.MockData", "Examen.MockData\Examen.MockData.csproj", "{8899AC72-14B7-4157-9352-D32BD4CD4E95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen.WebApi.Tests", "Examen.WebApi.Tests\Examen.WebApi.Tests.csproj", "{75EF3FD3-705A-474E-B2B8-95420D2F62E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen.Automatizacion", "Examen.Automatizacion\Examen.Automatizacion.csproj", "{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +51,18 @@ Global
 		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F65B0F11-5986-4214-A945-B11B5EE35A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8899AC72-14B7-4157-9352-D32BD4CD4E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8899AC72-14B7-4157-9352-D32BD4CD4E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8899AC72-14B7-4157-9352-D32BD4CD4E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8899AC72-14B7-4157-9352-D32BD4CD4E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EF3FD3-705A-474E-B2B8-95420D2F62E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EF3FD3-705A-474E-B2B8-95420D2F62E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EF3FD3-705A-474E-B2B8-95420D2F62E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EF3FD3-705A-474E-B2B8-95420D2F62E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +73,8 @@ Global
 		{8F4DE3CF-5786-4B3D-BEA3-3FA3DF862723} = {5D405BDE-4FC8-43EF-BBD3-7872F5876962}
 		{98B3B91D-8EB6-47FD-B4B7-2362BAF43C4A} = {487346A7-D764-4578-B123-188DFBA9DEF5}
 		{F65B0F11-5986-4214-A945-B11B5EE35A6B} = {487346A7-D764-4578-B123-188DFBA9DEF5}
+		{8899AC72-14B7-4157-9352-D32BD4CD4E95} = {35DF4C59-A9C5-4CDA-B3F8-3550AA7A1660}
+		{75EF3FD3-705A-474E-B2B8-95420D2F62E5} = {35DF4C59-A9C5-4CDA-B3F8-3550AA7A1660}
+		{CFEFA6AC-05BD-40A9-B3BD-31FF133BB84C} = {35DF4C59-A9C5-4CDA-B3F8-3550AA7A1660}
 	EndGlobalSection
 EndGlobal

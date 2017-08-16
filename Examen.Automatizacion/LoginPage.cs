@@ -45,14 +45,14 @@ namespace Examen.Automatizacion
 
         public void RegisterDataLogin_OK()
         {
-            userNameText.SendKeys("daniel@quintana.com");
-            passwordText.SendKeys("prueba");
+            userNameText.SendKeys("rchumpitazl@gmail.com");
+            passwordText.SendKeys("123456");
         }
 
         public void RegisterDataLogin_ERROR()
         {
-            userNameText.SendKeys("daniel@quintana.com");
-            passwordText.SendKeys("prueba2");
+            userNameText.SendKeys("adad@adad.com");
+            passwordText.SendKeys("dadad");
         }
 
         public void SignIn()

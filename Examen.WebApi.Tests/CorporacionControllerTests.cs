@@ -1,14 +1,12 @@
-using Examen.MockData;
-using Examen.Modelos;
-using Examen.PruebaDatos;
-using Examen.UnidadDeTrabajo;
 using Examen.WebApi.Controllers;
-using FluentAssertions;
-using Microsoft.AspNetCore.Mvc;
 using System;
+using Xunit;
+using Examen.MockData;
+using Microsoft.AspNetCore.Mvc;
+using Examen.Modelos;
+using FluentAssertions;
 using System.Collections.Generic;
 using System.Linq;
-using Xunit;
 
 namespace Examen.WebApi.Tests
 {
@@ -18,11 +16,10 @@ namespace Examen.WebApi.Tests
 
         public CorporacionControllerTests()
         {
-            //_controlador = new CorporacionController(new UnidadTrabajo(Configuracion.ConnectionString));
             _controlador = new CorporacionController(UnidadTrabajoMockeada.ObtenerUnidadDeTrabajo());
         }
 
-        [Fact(DisplayName = "[CorporacionController] Listar_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] ListarTodo")]
         public void Listar_Test()
         {
             var resultado = _controlador.ListarTodo() as OkObjectResult;
@@ -35,7 +32,7 @@ namespace Examen.WebApi.Tests
         }
 
 
-        [Fact(DisplayName = "[CorporacionController] TraerPorId_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] TraerPorId")]
         public void TraerPorId_Test()
         {
             var resultado = _controlador.TraerPorId(1) as OkObjectResult;
@@ -43,33 +40,19 @@ namespace Examen.WebApi.Tests
             resultado.Should().NotBeNull();
         }
 
-
-        [Fact(DisplayName = "[CorporacionController] ListarPaginado_Corporacion")]
-        public void ListarPaginado_Test()
-        {
-            var resultado = _controlador.ObtenerCorporacionesPaginadas(2, 25) as OkObjectResult;
-
-            resultado.Should().NotBeNull();
-
-            var modelo = resultado.Value as List<Corporation>;
-
-            modelo.Count().Should().BeGreaterThan(0);
-        }
-
-
-        [Fact(DisplayName = "[CorporacionController] Insertar_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] Insertar")]
         public void Insertar_Test()
         {
             Corporation corporacion = new Corporation
-            {                
-                Corp_Name = "Nueva corporación",
+            {
+                Corp_Name = "Corporación X",
                 Street = string.Empty,
                 City = string.Empty,
                 State_Prov = string.Empty,
                 Country = string.Empty,
                 Mail_Code = string.Empty,
                 Phone_No = string.Empty,
-                Expr_Dt = DateTime.Now.AddYears(5),
+                Expr_Dt = DateTime.Now.AddYears(10),
                 Corp_Code = string.Empty
             };
 
@@ -82,8 +65,7 @@ namespace Examen.WebApi.Tests
             modelo.Should().BeGreaterThan(0);
         }
 
-
-        [Fact(DisplayName = "[CorporacionController] Actualizar_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] Actualizar")]
         public void Actualizar_Test()
         {
             int corporacionPrueba = ((_controlador.ListarTodo() as OkObjectResult).Value as List<Corporation>).Max(x => x.Corp_No);
@@ -99,22 +81,32 @@ namespace Examen.WebApi.Tests
             resultado.Value.Should().Be(true);
         }
 
-
-        [Fact(DisplayName = "[CorporacionController] Eliminar_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] Eliminar")]
         public void Eliminar_Test()
         {
             int corporacionPrueba = ((_controlador.ListarTodo() as OkObjectResult).Value as List<Corporation>).Max(x => x.Corp_No);
 
-            Corporation ultimaCorporacion = (_controlador.TraerPorId(corporacionPrueba) as OkObjectResult).Value as Corporation;
-
-            var resultado = _controlador.Eliminar(ultimaCorporacion) as OkObjectResult;
+            var resultado = _controlador.Eliminar(corporacionPrueba) as OkObjectResult;
 
             resultado.Should().NotBeNull();
 
             resultado.Value.Should().Be(true);
         }
 
-        [Fact(DisplayName = "[CorporacionController] Contar_Registros_Corporacion")]
+        [Fact(DisplayName = "[CorporacionController] ObtenerCorporacionesPaginadas")]
+        public void ListarPaginado_Test()
+        {
+            var resultado = _controlador.ObtenerCorporacionesPaginadas(1, 25) as OkObjectResult;
+
+            resultado.Should().NotBeNull();
+
+            var modelo = resultado.Value as List<Corporation>;
+
+            modelo.Count().Should().BeGreaterThan(0);
+        }
+
+
+        [Fact(DisplayName = "[CorporacionController] ContarRegistros")]
         public void Contar_Registros_Test()
         {
             var resultado = _controlador.ContarRegistros() as OkObjectResult;
@@ -125,6 +117,5 @@ namespace Examen.WebApi.Tests
 
             modelo.Should().BeGreaterOrEqualTo(1);
         }
-
     }
 }
